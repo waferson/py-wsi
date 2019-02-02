@@ -1,5 +1,6 @@
 from setuptools import setup
 from os import path
+import io
 
 description = """Python package for dealing with whole slide images (.svs) for machine learning, including
                 intuitive, painless patch sampling using OpenSlide, automatic labeling from ImageScope XML 
@@ -9,7 +10,7 @@ description = """Python package for dealing with whole slide images (.svs) for m
 
 here = path.abspath(path.dirname(__file__))
 
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with io.open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(name='py_wsi',
